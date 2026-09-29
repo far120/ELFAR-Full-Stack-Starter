@@ -261,8 +261,6 @@ npm run docker:build  # Rebuild Docker images for client and server
 
 Designed and Developed with ❤️ by **Mostafa Elfar**.
 
-- **GitHub**: [@mostafaelfar11](https://github.com/mostafaelfar11)
-- **License**: ISC License
 
 ---
 
