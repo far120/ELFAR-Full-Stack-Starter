@@ -7,7 +7,10 @@
     "dev:client": "npm --prefix client run dev",
     "dev:server": "npm --prefix server run dev",
     "build:client": "npm --prefix client run build",
-    "build:server": "npm --prefix server run build"
+    "build:server": "npm --prefix server run build",
+    "docker:up": "docker compose up -d",
+    "docker:down": "docker compose down",
+    "docker:build": "docker compose build"
   },
   "devDependencies": {
     "concurrently": "^10.0.5"

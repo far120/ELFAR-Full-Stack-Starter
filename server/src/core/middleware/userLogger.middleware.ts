@@ -61,7 +61,7 @@ export const userActivityLogger = (req: Request, res: Response, next: NextFuncti
         if (!req.originalUrl.includes("/health") && !req.originalUrl.includes("/public")) {
             auditLogModel
                 .create({
-                    user: userId,
+                    user: userId ? (userId as any) : undefined,
                     userEmail,
                     userName,
                     userRole,

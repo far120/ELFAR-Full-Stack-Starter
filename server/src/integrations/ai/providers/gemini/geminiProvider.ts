@@ -48,12 +48,12 @@ export class GeminiProvider extends AIProvider {
     // Count Tokens
     // ========================================
 
-    async countTokens(input: any) {
+    async countTokens(input: any): Promise<number> {
         const response = await ai.models.countTokens({
             model: MODEL,
             contents: input
         });
-        return response.totalTokens;
+        return response.totalTokens ?? 0;
     }
 
 

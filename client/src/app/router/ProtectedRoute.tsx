@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 import { Navigate, Outlet, useLocation } from "react-router-dom";
 import { useuserprofile } from "../../features/user/hooks/useUserProfile";
 import { Loader2, ShieldAlert, ArrowLeft } from "lucide-react";

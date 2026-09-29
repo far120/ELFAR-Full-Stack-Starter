@@ -17,7 +17,7 @@ export const authMiddleware = async (req: Request, res: Response, next: NextFunc
       return next(new AppError("Unauthorized", 401));
     }
 
-    const decodedToken = jwt.verify(tokenValue,process.env.JWT_SECRET!);
+    const decodedToken = jwt.verify(tokenValue, process.env.JWT_SECRET!) as any;
     
     if (!decodedToken) {
         return next(new AppError("Unauthorized", 401));

@@ -21,12 +21,12 @@ You are an intelligent user profile analyzer for an enterprise application.
 - Phone: ${user.phone || "Not provided"}
 - Address: ${user.address || "Not provided"}
 - System Role: ${user.role}
-- Account Status: ${user.isLocked ? "Locked" : "Active"}
+- Account Status: ${(user as any).isBlocked || (user as any).isLocked ? "Blocked" : "Active"}
 - Verification Status: ${user.isVerified ? "Verified" : "Unverified"}
 - Profile Avatar: ${user.avatar ? "Uploaded" : "Not set"}
 - Member Since: ${
-  user.createdAt
-    ? new Date(user.createdAt).toISOString().split("T")[0]
+  (user as any).createdAt
+    ? new Date((user as any).createdAt).toISOString().split("T")[0]
     : "Unknown"
 }
 
